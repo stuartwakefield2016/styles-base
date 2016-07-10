@@ -48,9 +48,32 @@ a {
   text-decoration: none;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited {
   color: #FC735C;
-  border-bottom: 1px solid #FC735C;
+  display: inline-block;
+  position: relative;
+  transition: color 0.25s linear;
+  outline: none;
+}
+
+a:link::after, a:visited::after {
+  content: "";
+  position: absolute;
+  bottom: 0.125em;
+  left: 50%;
+  right: 50%;
+  border-bottom: 2px solid #FC735C;
+  transition: left 0.25s ease-in-out, right 0.25s ease-in-out, border-color 0.25s linear;
+}
+
+a:hover, a:focus, a:active {
+  color: #0F233E;
+}
+
+a:hover::after, a:focus::after, a:active::after {
+  left: 0;
+  right: 0;
+  border-bottom-color: #0F233E;
 }
 
 p {
