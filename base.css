@@ -57,10 +57,13 @@ a::after {
   content: "";
   position: absolute;
   bottom: 0.125em;
-  left: 50%;
-  right: 50%;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
   border-bottom: 2px solid #FC735C;
-  transition: left 0.25s ease-in-out, right 0.25s ease-in-out, border-color 0.25s linear;
+  transition:
+    transform 0.25s ease-in-out,
+    border-color 0.25s linear;
 }
 
 a:hover,
@@ -72,8 +75,7 @@ a:active {
 a:hover::after,
 a:focus::after,
 a:active::after {
-  left: 0;
-  right: 0;
+  transform: scale(1);
   border-bottom-color: #0F233E;
 }
 
