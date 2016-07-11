@@ -1,9 +1,9 @@
 {
-  "name": "stuartwakefield-v2016-styles-base",
+  "name": "stuartwakefield2016-styles-base",
   "authors": [
     "Stuart Wakefield <me@stuartwakefield.co.uk>"
   ],
-  "description": "The base CSS styling for Stuart Wakefield v2016 website.",
+  "description": "The base CSS styling for Stuart Wakefield 2016 website.",
   "main": "base.css",
   "moduleType": [],
   "keywords": [
