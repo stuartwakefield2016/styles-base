@@ -45,18 +45,15 @@ strong {
 }
 
 a {
-  text-decoration: none;
-}
-
-a:link, a:visited {
   color: #FC735C;
   display: inline-block;
   position: relative;
   transition: color 0.25s linear;
   outline: none;
+  text-decoration: none;
 }
 
-a:link::after, a:visited::after {
+a::after {
   content: "";
   position: absolute;
   bottom: 0.125em;
@@ -66,11 +63,15 @@ a:link::after, a:visited::after {
   transition: left 0.25s ease-in-out, right 0.25s ease-in-out, border-color 0.25s linear;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #0F233E;
 }
 
-a:hover::after, a:focus::after, a:active::after {
+a:hover::after,
+a:focus::after,
+a:active::after {
   left: 0;
   right: 0;
   border-bottom-color: #0F233E;
